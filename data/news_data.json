@@ -5,7 +5,7 @@
       "titulo": "Machu Picchu recibe certificación de sostenibilidad",
       "resumen": "La ciudadela inca ha sido reconocida por sus esfuerzos en turismo sostenible y conservación del patrimonio.",
       "fecha": "2024-12-15",
-      "imagen": "/images/machu picchu.jfif",
+      "imagen": "images/machu picchu.jfif",
       "categoria": "Patrimonio"
     },
     {
@@ -13,7 +13,7 @@
       "titulo": "Nueva ruta de trekking en el Amazonas peruano",
       "resumen": "Se inaugura un nuevo sendero ecológico que conecta comunidades indígenas con la selva amazónica.",
       "fecha": "2024-12-10",
-      "imagen": "/images/trekking amazonas.jpg",
+      "imagen": "images/trekking amazonas.jpg",
       "categoria": "Aventura"
     },
     {
@@ -21,7 +21,7 @@
       "titulo": "Festival gastronómico en Lima atrae turistas internacionales",
       "resumen": "La capital peruana celebra su rica tradición culinaria con un festival que reúne a los mejores chefs del país.",
       "fecha": "2024-12-08",
-      "imagen": "/images/festival gastronomico lima.jpeg",
+      "imagen": "images/festival gastronomico lima.jpeg",
       "categoria": "Gastronomía"
     },
     {
@@ -29,7 +29,7 @@
       "titulo": "Descubrimiento arqueológico en Caral",
       "resumen": "Nuevos hallazgos en la ciudad más antigua de América revelan secretos de la civilización caral.",
       "fecha": "2024-12-05",
-      "imagen": "/images/descubrimiento caral.jpg",
+      "imagen": "images/descubrimiento caral.jpg",
       "categoria": "Arqueología"
     },
     {
@@ -37,7 +37,7 @@
       "titulo": "Temporada alta de avistamiento de ballenas en Paracas",
       "resumen": "Los mejores meses para observar ballenas jorobadas en la Reserva Nacional de Paracas han comenzado.",
       "fecha": "2024-12-03",
-      "imagen": "/images/ballenas paracas.jpg",
+      "imagen": "images/ballenas paracas.jpg",
       "categoria": "Naturaleza"
     },
     {
@@ -45,7 +45,7 @@
       "titulo": "Renovación del Museo Nacional de Antropología",
       "resumen": "El museo presenta nuevas salas interactivas dedicadas a las culturas precolombinas del Perú.",
       "fecha": "2024-12-01",
-      "imagen": "/images/renovacion museo.jpg",
+      "imagen": "images/renovacion museo.jpg",
       "categoria": "Cultura"
     }
   ]
