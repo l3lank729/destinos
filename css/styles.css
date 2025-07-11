@@ -245,7 +245,7 @@ grid-template-columns: 1fr;
 
 /* Estilos específicos para la galería */
 .gallery-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/fondo-galeria.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/fondo-galeria.jpg');
     background-size: cover;
     background-position: center;
     color: white;
