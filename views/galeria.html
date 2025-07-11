@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Perú Destinos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="/images/webicon.jfif" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <a href="/index.html" class="logo">🏔️ Perú Destinos</a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="presupuesto.html">Presupuesto</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="gallery-hero">
+            <div class="container">
+                <h1 class="hero-title">Galería de Destinos</h1>
+                <p class="hero-subtitle">Descubre la belleza del Perú a través de nuestras imágenes</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="machu-picchu">Machu Picchu</button>
+                    <button class="filter-btn" data-filter="amazonas">Amazonas</button>
+                    <button class="filter-btn" data-filter="cusco">Cusco</button>
+                    <button class="filter-btn" data-filter="lima">Lima</button>
+                    <button class="filter-btn" data-filter="arequipa">Arequipa</button>
+                    <button class="filter-btn" data-filter="paracas">Paracas</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Machu Picchu -->
+                    <div class="gallery-item" data-category="machu-picchu">
+                        <img src="/images/Machu-Picchu atardecer.jpg" alt="Machu Picchu amanecer" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Machu Picchu al Amanecer</h3>
+                            <p>La ciudadela inca iluminada por los primeros rayos del sol</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="machu-picchu">
+                        <img src="/images/terrazas incas.jpg" alt="Terrazas de Machu Picchu" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Terrazas Incas</h3>
+                            <p>Arquitectura ancestral en perfecta armonía con la naturaleza</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="machu-picchu">
+                        <img src="/images/huaynapicchu.jpg" alt="Vista panorámica Machu Picchu" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Vista Panorámica</h3>
+                            <p>La majestuosa ciudadela desde el Huayna Picchu</p>
+                        </div>
+                    </div>
+
+                    <!-- Amazonas -->
+                    <div class="gallery-item" data-category="amazonas">
+                        <img src="/images/selva amazonica.avif" alt="Selva amazónica" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Selva Amazónica</h3>
+                            <p>La mayor biodiversidad del planeta en un solo lugar</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="amazonas">
+                        <img src="/images/rio amazonas.jpg" alt="Río amazónico" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Río Amazonas</h3>
+                            <p>Navegando por las aguas del río más caudaloso del mundo</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="amazonas">
+                        <img src="/images/fauna amazonas.jpg" alt="Fauna amazónica" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Fauna Amazónica</h3>
+                            <p>Especies únicas en su hábitat natural</p>
+                        </div>
+                    </div>
+
+                    <!-- Cusco -->
+                    <div class="gallery-item" data-category="cusco">
+                        <img src="/images/centro historico cusco.jpg" alt="Centro histórico Cusco" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Centro Histórico de Cusco</h3>
+                            <p>Arquitectura colonial sobre cimientos incas</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="cusco">
+                        <img src="/images/plaza armas cusco.png" alt="Plaza de Armas Cusco" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Plaza de Armas</h3>
+                            <p>El corazón histórico de la antigua capital inca</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="cusco">
+                        <img src="/images/mercado san pedro.jpg" alt="Mercado San Pedro" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Mercado San Pedro</h3>
+                            <p>Colores y sabores de la cultura cusqueña</p>
+                        </div>
+                    </div>
+
+                    <!-- Lima -->
+                    <div class="gallery-item" data-category="lima">
+                        <img src="/images/miraflores.jpg" alt="Miraflores Lima" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Miraflores</h3>
+                            <p>Modernidad y tradición en los acantilados de Lima</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="lima">
+                        <img src="/images/centro historico lima.webp" alt="Centro histórico Lima" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Centro Histórico</h3>
+                            <p>Patrimonio colonial en el corazón de la capital</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="lima">
+                        <img src="/images/Gastronomia lima.jpg" alt="Gastronomía limeña" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Gastronomía Limeña</h3>
+                            <p>La capital gastronómica de América</p>
+                        </div>
+                    </div>
+
+                    <!-- Arequipa -->
+                    <div class="gallery-item" data-category="arequipa">
+                        <img src="/images/ciudad blanca.webp" alt="Ciudad Blanca Arequipa" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>La Ciudad Blanca</h3>
+                            <p>Arquitectura colonial en sillar volcánico</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="arequipa">
+                        <img src="/images/volcan misti.jpg" alt="Volcán Misti" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Volcán Misti</h3>
+                            <p>El guardián de la Ciudad Blanca</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="arequipa">
+                        <img src="/images/cañon colca.avif" alt="Cañón del Colca" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Cañón del Colca</h3>
+                            <p>Uno de los cañones más profundos del mundo</p>
+                        </div>
+                    </div>
+
+                    <!-- Paracas -->
+                    <div class="gallery-item" data-category="paracas">
+                        <img src="/images/reserva nacional paracas.jpg" alt="Reserva Nacional Paracas" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Reserva Nacional de Paracas</h3>
+                            <p>Desierto costero y vida marina en perfecta armonía</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="paracas">
+                        <img src="/images/islas ballestas.png" alt="Islas Ballestas" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Islas Ballestas</h3>
+                            <p>Santuario de lobos marinos y aves guaneras</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="paracas">
+                        <img src="/images/candelabro de paracas.webp" alt="Candelabro de Paracas" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3>Candelabro de Paracas</h3>
+                            <p>Misterioso geoglifo en la península de Paracas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img src="" alt="" class="lightbox-image">
+                <div class="lightbox-info">
+                    <h3 class="lightbox-title"></h3>
+                    <p class="lightbox-description"></p>
+                </div>
+                <div class="lightbox-nav">
+                    <button class="lightbox-prev">&#10094;</button>
+                    <button class="lightbox-next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Perú Destinos</h3>
+                    <p>Tu compañero de viaje para descubrir los tesoros más increíbles del Perú. Experiencias auténticas y memorables te esperan.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinos</h3>
+                    <p><a href="#">Machu Picchu</a></p>
+                    <p><a href="#">Amazonas</a></p>
+                    <p><a href="#">Cusco</a></p>
+                    <p><a href="#">Arequipa</a></p>
+                    <p><a href="#">Lima</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <p><a href="presupuesto.html">Tours Personalizados</a></p>
+                    <p><a href="#">Guías Especializados</a></p>
+                    <p><a href="#">Transporte</a></p>
+                    <p><a href="#">Alojamiento</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📍 Av. El Sol 123, Cusco, Perú</p>
+                    <p>📞 +51 984 123 456</p>
+                    <p>✉️ info@perudestinos.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Perú Destinos. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

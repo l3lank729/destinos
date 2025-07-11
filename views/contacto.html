@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Perú perudestinos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="/images/webicon.jfif" type="image/png">
+    <!-- Leaflet CSS para el mapa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+</head>
+<body>
+    <!-- Header con navegación fija -->
+    <header>
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/index.html" class="logo">🏔️ Perú Destinos</a>
+                <ul class="nav-menu">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de información de contacto -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Información de Contacto</h2>
+                
+                <div class="grid grid-3 contact-info">
+                    <!-- Ubicación -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Nuestra Oficina</h3>
+                        <p>Av. El Sol 123<br>
+                        Cusco, Perú<br>
+                        CP: 08000</p>
+                        <a href="#mapa" class="btn btn-small">Ver en Mapa</a>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Teléfono</h3>
+                        <p>+51 84 123 456<br>
+                        +51 84 789 012<br>
+                        WhatsApp: +51 987 654 321</p>
+                        <a href="tel:+51841234567" class="btn btn-small">Llamar Ahora</a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@perudestinos.com<br>
+                        reservas@perudestinos.com<br>
+                        soporte@perudestinos.com</p>
+                        <a href="mailto:info@perudestinos.com" class="btn btn-small">Enviar Email</a>
+                    </div>
+                </div>
+
+                <!-- Horarios de atención -->
+                <div class="horarios-section">
+                    <h3><i class="fas fa-clock"></i> Horarios de Atención</h3>
+                    <div class="horarios-grid">
+                        <div class="horario-item">
+                            <strong>Lunes - Viernes:</strong> 8:00 AM - 6:00 PM
+                        </div>
+                        <div class="horario-item">
+                            <strong>Sábados:</strong> 9:00 AM - 4:00 PM
+                        </div>
+                        <div class="horario-item">
+                            <strong>Domingos:</strong> 10:00 AM - 2:00 PM
+                        </div>
+                        <div class="horario-item">
+                            <strong>Emergencias:</strong> 24/7 (Solo WhatsApp)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del mapa interactivo -->
+        <section class="section mapa-section" id="mapa">
+            <div class="container">
+                <h2 class="section-title">Nuestra Ubicación</h2>
+                
+                <div class="mapa-container">
+                    <!-- Controles del mapa -->
+                    <div class="mapa-controles">
+                        <div class="ubicacion-input">
+                            <label for="direccionUsuario">Tu ubicación:</label>
+                            <input type="text" id="direccionUsuario" placeholder="Ingresa tu dirección para calcular la ruta">
+                            <button id="calcularRuta" class="btn btn-small">
+                                <i class="fas fa-route"></i> Calcular Ruta
+                            </button>
+                        </div>
+                        <div class="mapa-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. El Sol 123, Cusco, Perú</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-car"></i>
+                                <span id="tiempoViaje">Tiempo estimado: --</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-route"></i>
+                                <span id="distanciaViaje">Distancia: --</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div id="mapa-leaflet" class="mapa-leaflet"></div>
+                </div>
+
+                <!-- Instrucciones de transporte -->
+                <div class="transporte-info">
+                    <h3><i class="fas fa-bus"></i> Cómo Llegar</h3>
+                    <div class="grid grid-2">
+                        <div class="transporte-card">
+                            <h4><i class="fas fa-plane"></i> Desde el Aeropuerto</h4>
+                            <p>Aeropuerto Internacional Alejandro Velasco Astete (CUZ)</p>
+                            <ul>
+                                <li>Taxi: 15-20 minutos (S/ 15-25)</li>
+                                <li>Bus público: 30-40 minutos (S/ 2)</li>
+                                <li>Servicio de transfer: Disponible bajo reserva</li>
+                            </ul>
+                        </div>
+                        <div class="transporte-card">
+                            <h4><i class="fas fa-train"></i> Transporte Público</h4>
+                            <p>Desde la Plaza de Armas de Cusco</p>
+                            <ul>
+                                <li>Caminando: 5-8 minutos</li>
+                                <li>Taxi: 2-3 minutos (S/ 4-6)</li>
+                                <li>Buses locales: Líneas 1, 5, 12</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de formulario de contacto rápido -->
+        <section class="section contacto-rapido">
+            <div class="container">
+                <h2 class="section-title">Envíanos un Mensaje</h2>
+                
+                <div class="grid grid-2 contacto-content">
+                    <div class="contacto-form-container">
+                        <form id="contactoForm" class="contacto-form">
+                            <div class="form-group">
+                                <label for="nombreContacto">Nombre Completo</label>
+                                <input type="text" id="nombreContacto" name="nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="emailContacto">Email</label>
+                                <input type="email" id="emailContacto" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefonoContacto">Teléfono</label>
+                                <input type="tel" id="telefonoContacto" name="telefono">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="consulta">Consulta General</option>
+                                    <option value="reserva">Reserva de Viaje</option>
+                                    <option value="presupuesto">Solicitud de Presupuesto</option>
+                                    <option value="reclamo">Reclamo o Sugerencia</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contacto-adicional">
+                        <h3>¿Prefieres otro método?</h3>
+                        <div class="contacto-alternativo">
+                            <div class="contacto-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p>Respuesta inmediata</p>
+                                    <a href="https://wa.me/51987654321" target="_blank" class="btn btn-small">
+                                        <i class="fab fa-whatsapp"></i> Chatear
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contacto-item">
+                                <i class="fas fa-video"></i>
+                                <div>
+                                    <h4>Videollamada</h4>
+                                    <p>Consulta personalizada</p>
+                                    <a href="#" class="btn btn-small" id="videoCallBtn">
+                                        <i class="fas fa-video"></i> Programar
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contacto-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <h4>Cita Presencial</h4>
+                                    <p>Visítanos en nuestra oficina</p>
+                                    <a href="#" class="btn btn-small" id="citaBtn">
+                                        <i class="fas fa-calendar-alt"></i> Agendar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="redes-sociales">
+                            <h4>Síguenos en redes sociales</h4>
+                            <div class="social-links">
+                                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Perú Destinos</h3>
+                    <p>Tu compañero de viaje para descubrir los tesoros más increíbles del Perú. Experiencias auténticas y memorables te esperan.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinos</h3>
+                    <p><a href="#">Machu Picchu</a></p>
+                    <p><a href="#">Amazonas</a></p>
+                    <p><a href="#">Cusco</a></p>
+                    <p><a href="#">Arequipa</a></p>
+                    <p><a href="#">Lima</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <p><a href="presupuesto.html">Tours Personalizados</a></p>
+                    <p><a href="#">Guías Especializados</a></p>
+                    <p><a href="#">Transporte</a></p>
+                    <p><a href="#">Alojamiento</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📍 Av. El Sol 123, Cusco, Perú</p>
+                    <p>📞 +51 984 123 456</p>
+                    <p>✉️ info@perudestinos.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Perú Destinos. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS para el mapa -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

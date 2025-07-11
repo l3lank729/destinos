@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto - Perú Turístico</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="/images/webicon.jfif" type="image/png">
+</head>
+<body>
+    <!-- Header con navegación fija -->
+    <header>
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">🏔️ Perú Destinos</a>
+                <ul class="nav-menu">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección del formulario de presupuesto -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Presupuesto</h2>
+                
+                <form id="presupuestoForm" class="presupuesto-form">
+                    <!-- Datos de contacto -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-user"></i> Datos de Contacto
+                        </h3>
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <div class="error-message" id="nombre-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellidos">Apellidos *</label>
+                                <input type="text" id="apellidos" name="apellidos" required>
+                                <div class="error-message" id="apellidos-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                                <div class="error-message" id="telefono-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección de presupuesto -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-calculator"></i> Configuración del Viaje
+                        </h3>
+                        
+                        <!-- Productos/Paquetes -->
+                        <div class="form-group">
+                            <label for="producto">Selecciona tu Paquete Turístico *</label>
+                            <select id="producto" name="producto" required>
+                                <option value="">Selecciona un paquete</option>
+                                <option value="550">Clásico Cusco - Machu Picchu (3 días) - €550</option>
+                                <option value="850">Aventura Completa (5 días) - €850</option>
+                                <option value="1200">Perú Místico (7 días) - €1200</option>
+                                <option value="1800">Gran Tour del Perú (10 días) - €1800</option>
+                            </select>
+                        </div>
+
+                        <!-- Plazo -->
+                        <div class="form-group">
+                            <label for="plazo">Días de anticipación para reservar</label>
+                            <input type="number" id="plazo" name="plazo" min="1" max="365" value="30">
+                            <small class="form-help">Reserva con más de 60 días: 10% descuento | Más de 90 días: 15% descuento</small>
+                        </div>
+
+                        <!-- Extras -->
+                        <div class="form-group">
+                            <label>Servicios Adicionales</label>
+                            <div class="extras-grid">
+                                <div class="extra-item">
+                                    <input type="checkbox" id="seguro" name="extras" value="50">
+                                    <label for="seguro">Seguro de viaje (+€50)</label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="guia" name="extras" value="120">
+                                    <label for="guia">Guía privado (+€120)</label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="transporte" name="extras" value="80">
+                                    <label for="transporte">Transporte premium (+€80)</label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="hotel" name="extras" value="200">
+                                    <label for="hotel">Upgrade hotel 5* (+€200)</label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="fotografia" name="extras" value="100">
+                                    <label for="fotografia">Sesión fotográfica (+€100)</label>
+                                </div>
+                                <div class="extra-item">
+                                    <input type="checkbox" id="gastronomia" name="extras" value="75">
+                                    <label for="gastronomia">Tour gastronómico (+€75)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resumen del presupuesto -->
+                        <div class="presupuesto-resumen">
+                            <h3>Resumen del Presupuesto</h3>
+                            <div class="presupuesto-detalles">
+                                <div class="presupuesto-linea">
+                                    <span>Paquete base:</span>
+                                    <span id="precio-base">€0</span>
+                                </div>
+                                <div class="presupuesto-linea">
+                                    <span>Servicios adicionales:</span>
+                                    <span id="precio-extras">€0</span>
+                                </div>
+                                <div class="presupuesto-linea">
+                                    <span>Descuento por anticipación:</span>
+                                    <span id="descuento">€0</span>
+                                </div>
+                                <div class="presupuesto-linea total">
+                                    <span><strong>Total:</strong></span>
+                                    <span id="precio-total"><strong>€0</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Condiciones y envío -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-check-circle"></i> Condiciones y Envío
+                        </h3>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="condiciones" name="condiciones" required>
+                                <label for="condiciones">
+                                    Acepto las <a href="#" target="_blank">condiciones de privacidad</a> y términos de servicio *
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Enviar Presupuesto
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="resetBtn">
+                                <i class="fas fa-refresh"></i> Resetear Formulario
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Perú Destinos</h3>
+                    <p>Tu compañero de viaje para descubrir los tesoros más increíbles del Perú. Experiencias auténticas y memorables te esperan.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinos</h3>
+                    <p><a href="#">Machu Picchu</a></p>
+                    <p><a href="#">Amazonas</a></p>
+                    <p><a href="#">Cusco</a></p>
+                    <p><a href="#">Arequipa</a></p>
+                    <p><a href="#">Lima</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <p><a href="presupuesto.html">Tours Personalizados</a></p>
+                    <p><a href="#">Guías Especializados</a></p>
+                    <p><a href="#">Transporte</a></p>
+                    <p><a href="#">Alojamiento</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📍 Av. El Sol 123, Cusco, Perú</p>
+                    <p>📞 +51 984 123 456</p>
+                    <p>✉️ info@perudestinos.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Perú Destinos. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
